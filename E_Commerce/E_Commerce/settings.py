@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     
 ]
 
+CURRENCIES = ('USD', 'EUR')
+CURRENCY_CHOICES = [('USD', 'USD $'), ('EUR', 'EUR €')]
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
