@@ -1,20 +1,75 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'ShopNest/Bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ShopNest/Bootstrap/icons/font/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'ShopNest/Bootstrap/icons/font/bootstrap-icons.min.css' %}">
+    <link rel="shortcut icon" href="{% static 'ShopNest/Bootstrap/icons/basket.svg' %}" type="image/x-icon">
     <title>ShopNest</title>
+    
 </head>
+<style>
+    #sidebar-link{
+        color: #f8f9fa; /*Bootstrap light*/
+    }
+    #sidebar-link:hover{
+        background-color: #f8f9fa; /*Bootstrap light*/
+        color: #212529; /*Bootstrap dark*/
+    }
+    #sidebar-link:hover .bi{
+        fill: black;
+    }
+    
+</style>
 <body>
-    
-    {% block header %}
-        
-    {% endblock header %}
 
-    
     {% block nav %}
-        
+    <nav class="navbar bg-body-tertiary navbar-expand-lg shadow-sm p-2 rounded sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img src="{% static 'ShopNest/Bootstrap/icons/basket.svg' %}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            <b>ShopNest</b>
+          </a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Suchen" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Suchen</button>
+        </form>
+        </div>
+      </nav>
     {% endblock nav %}
+    
+    {% block sidebar %}
+        <aside class="d-flex flex-column flex-shrink-0 p-3 bg-primary shadow rounded" data-bs-theme="dark" style="width: 280px;">
+            
+            <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none" href="/">
+                <svg class="bi me-2 mb-1" width="40" height="32" fill="white" viewBox="0 0 16 16"> 
+                    <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9zM1 7v1h14V7zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5"/>
+                </svg>
+                <b class="text-light">ShopNest</b>
+                
+            </a>
+            <hr class="text-light">
+            <ul class="nav nav-pills flex-column mb-auto d-flex justify-content-center">
+                <li>
+                    <a href="/" class="nav-link" id="sidebar-link">
+                        <svg class="bi me-2 mb-1" width="16" height="16" fill="white">
+                            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+                        </svg>
+                        Startseite
+                    </a>
+                </li>
+                
+            </ul>
+            <hr class="text-light">
+            
+
+            
+        
+        </aside>
+    {% endblock sidebar %}
 
     
     {% block main %}
@@ -29,6 +84,6 @@
         
         
         
-    
+    <script src="{% static 'ShopNest/Bootstrap/js/bootstrap.min.js' %}"></script>
 </body>
 </html>
