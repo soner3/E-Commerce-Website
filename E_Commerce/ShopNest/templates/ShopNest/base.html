@@ -8,26 +8,14 @@
     <link rel="stylesheet" href="{% static 'ShopNest/Bootstrap/icons/font/bootstrap-icons.css' %}">
     <link rel="stylesheet" href="{% static 'ShopNest/Bootstrap/icons/font/bootstrap-icons.min.css' %}">
     <link rel="shortcut icon" href="{% static 'ShopNest/Bootstrap/icons/basket.svg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'ShopNest/CSS/sidebar.css' %}">
     <title>ShopNest</title>
     
 </head>
-<style>
-    #sidebar-link{
-        color: #f8f9fa; /*Bootstrap light*/
-    }
-    #sidebar-link:hover{
-        background-color: #f8f9fa; /*Bootstrap light*/
-        color: #212529; /*Bootstrap dark*/
-    }
-    #sidebar-link:hover .bi{
-        fill: black;
-    }
-    
-</style>
 <body>
 
     {% block nav %}
-    <nav class="navbar bg-body-tertiary navbar-expand-lg shadow-sm p-2 rounded sticky-top">
+        <nav class="navbar bg-body-tertiary navbar-expand-lg shadow-sm p-2 rounded sticky-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
             <img src="{% static 'ShopNest/Bootstrap/icons/basket.svg' %}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
