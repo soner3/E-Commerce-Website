@@ -1,10 +1,9 @@
-#sidebar-link{
-    color: #f8f9fa; /*Bootstrap light*/
+.nav-link:hover{
+    background-color: #0d6efd;
+    color: #f8f9fa;
+    
 }
-#sidebar-link:hover{
-    background-color: #f8f9fa; /*Bootstrap light*/
-    color: #212529; /*Bootstrap dark*/
-}
-#sidebar-link:hover .bi{
-    fill: black;
+.nav-link .bi:hover{
+    fill: #f8f9fa;
+    
 }
