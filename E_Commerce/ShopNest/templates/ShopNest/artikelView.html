@@ -1,0 +1,25 @@
+{% extends 'ShopNest/base.html' %}
+{% load static %}
+
+
+{% block main %}
+    <main>
+        <div class="card m-2 shadow" style="width: 18rem;">
+            <img src="{{artikel.bild}}" class="card-img-top" width="600" height="300"  alt="Bild">
+            <div class="card-body">
+                <h5 class="card-title">{{artikel.titel}}</h5>
+                <hr>
+                <h5 class="card-title">{{artikel.preis}}€</h5>
+
+            </div>
+            
+            <div class="card-footer">
+                <a href="#" class="btn btn-outline-primary">Go somewhere</a>
+
+            </div>
+        </div>
+
+
+    </main>
+{% endblock main %}
+    

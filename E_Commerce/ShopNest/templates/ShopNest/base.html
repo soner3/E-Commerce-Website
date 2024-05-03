@@ -16,23 +16,25 @@
     {% block nav %}
       <nav class="navbar bg-body-tertiary navbar-expand-lg shadow p-2 rounded sticky-top">
         <div class="container-fluid d-flex justify-content-between">
-          <button class="btn btn-outline-primary p-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="bi bi-list fs-4"></i></button>
+          <button class="btn btn-outline-primary p-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+            <i class="bi bi-list fs-4"></i>
+          </button>
           <a class="navbar-brand fs-3" href="/">
             <svg class="bi mb-2" width="40" height="32" viewBox="0 0 16 16">
               <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9zM1 7v1h14V7zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5" />
             </svg>
             <b>ShopNest</b>
           </a>
-
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Suchen" aria-label="Search" />
-            <button class="btn btn-outline-primary" type="submit">Suchen</button>
-          </form>
+          <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <i class="bi bi-search fs-4"></i>
+          </button>
+          
         </div>
       </nav>
     {% endblock %} 
+    
     {% block sidebar %}
-      <div class="offcanvas offcanvas-start d-flex flex-column flex-shrink-0 p-3 bg-tertiary" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 280px">
+      <aside class="offcanvas offcanvas-start d-flex flex-column flex-shrink-0 p-3 bg-tertiary" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 280px">
         <div class="offcanvas-header">
           <div class="offcanvas-title d-flex align-items-center mb-3 mb-md-0 me-md-auto fs-4" id="offcanvasWithBothOptionsLabel">
             <svg class="bi me-2 mb-1" width="40" height="32" viewBox="0 0 16 16">
@@ -73,14 +75,60 @@
           </ul>
         </div>
         <hr />
-      </div>
+      </aside>
     {% endblock %} 
+
+    
+    {% block search_sidebar %}
+    <aside class="offcanvas offcanvas-end d-flex flex-column flex-shrink-0 p-3 bg-tertiary" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" aria-controls="offcanvasWithBothOptions" data-bs-scroll="true">
+      <div class="offcanvas-header">
+        <div class="offcanvas-title d-flex align-items-center mb-3 mb-md-0 me-md-auto fs-4" id="offcanvasRightLabel" >
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Suchen" aria-label="Search" />
+            <button class="btn btn-outline-primary" type="submit">Suchen</button>
+          </form>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <hr>
+      <div class="offcanvas-body">
+        ...
+      </div>
+    </aside>
+      
+    {% endblock search_sidebar %}
+      
+
+
+
     {% block main %}
 
     {% endblock %} 
 
     {% block footer %}
-
+      <div class="container shadow-sm">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="me-2 mb-2 text-body-secondary text-decoration-none lh-1">
+              <i class="bi bi-basket fs-4"></i>
+              <b>ShopNest</b>
+            </a>
+            <span class="text-body-secondary">© 2024 Company, Inc</span>
+          </div>
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3">
+              <a href="https://github.com/soner3" class="text-body-secondary">
+                <i class="bi bi-github fs-4"></i>
+              </a>
+            </li>
+            <li class="ms-3">
+              <a href="https://www.linkedin.com/in/soner-astan-1842a529a/" class="text-body-secondary">
+                <i class="bi bi-linkedin fs-4"></i>
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </div>
     {% endblock %}
 
     <script src="{% static 'ShopNest/Bootstrap/js/bootstrap.min.js' %}"></script>
