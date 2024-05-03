@@ -4,8 +4,7 @@ language: german
 Mit dem Django Framework entwickelt
 
 ## Tools
-
-Datenbank: MySQL
+MySQL
 Bootstrap5
 Django-Debug-Toolbar
 Django-Money
