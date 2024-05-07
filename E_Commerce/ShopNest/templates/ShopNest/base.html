@@ -93,7 +93,39 @@
       </div>
       <hr>
       <div class="offcanvas-body">
-        ...
+        <h5 class="fs-5">Filtern nach Kategorie</h5>
+        <ul class="nav nav-pills flex-column mb-auto">
+          <button class="btn btn-outline-primary border-0 d-flex flex-start p-2" onclick="filterArtikel('women')">
+            <div class="fs-6 ps-2">
+              <i class="bi bi-person-standing-dress pe-none me-2 mb-1"></i>
+              Damen Kleidung
+            </div>
+          </button>
+          <button class="btn btn-outline-primary border-0 d-flex flex-start p-2" onclick="filterArtikel('men')">
+            <div class="fs-6 ps-2">
+              <i class="bi bi-person-standing pe-none me-2 mb-1"></i>
+              Herren Kleidung
+            </div>
+          </button>
+          <button class="btn btn-outline-primary border-0 d-flex flex-start p-2" onclick="filterArtikel('electronics')">
+            <div class="fs-6 ps-2">
+              <i class="bi bi-nintendo-switch pe-none me-2 mb-1"></i>
+              Elektronik
+            </div>
+          </button>
+          <button class="btn btn-outline-primary border-0 d-flex flex-start p-2" onclick="filterArtikel('jewelery')">
+            <div class="fs-6 ps-2">
+              <i class="bi bi-gem pe-none me-2 mb-1"></i>
+              Schmuck
+            </div>
+          </button>
+          <button class="btn btn-outline-primary border-0 d-flex flex-start p-2" onclick="filterArtikel('alle')">
+            <div class="fs-6 ps-2">
+              <i class="bi bi-bag-plus pe-none me-2 mb-1"></i>
+              Alle Artikel Anzeigen
+            </div>
+          </button>
+        </ul>
       </div>
     </aside>
       
@@ -132,6 +164,8 @@
       </div>
     {% endblock %}
 
+
+    <script src="{% static 'ShopNest/JS/filter.js' %}"></script>
     <script src="{% static 'ShopNest/Bootstrap/js/bootstrap.min.js' %}"></script>
   </body>
 </html>

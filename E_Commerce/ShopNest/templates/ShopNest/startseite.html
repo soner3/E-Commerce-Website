@@ -5,14 +5,16 @@
 {% block main %}
     <main>
         
-        <div class="d-flex flex-wrap justify-content-around">
+        <div class="d-flex flex-wrap justify-content-around" id="artikelContainer">
             {% for artikel in artikels %}
-                <div class="card m-2 shadow" style="width: 18rem;">
+                <div class="card m-2 shadow artikel {{artikel.artikelkategorie}}" style="width: 18rem;">
                     <img src="{{artikel.bild}}" class="card-img-top" width="600" height="300"  alt="Bild">
                     <div class="card-body">
                         <h5 class="card-title">{{artikel.titel}}</h5>
                         <hr>
                         <h5 class="card-title">{{artikel.preis}}€</h5>
+                        <hr>
+                        <h5 class="card-title">{{artikel.artikelkategorie}}</h5>
 
                     </div>
                     
