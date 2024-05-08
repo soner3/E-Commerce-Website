@@ -16,3 +16,5 @@
 3. requirements installieren mit dem Befehl: pip install -r requirements.txt
 4. Bootstrap CDN in das Base Template im head-Tag einfügen. Hier ist der Pfad zum Base-File: E_Commerce/ShopNest/templates/ShopNest/base.html
 5. Erstelle im Übergeordneten Ordner eine ".env" Datei und weise deinen Datenbank Namen, Passwort und Usernamen für die Varibalen in der settings Datei zu.
+6. Fülle die Datenbank mit Inhalten deiner wahl
+7. Gebe folgenden Befehl im Terminal ein: python manage.py runserver
