@@ -83,9 +83,9 @@
     <aside class="offcanvas offcanvas-end d-flex flex-column flex-shrink-0 p-3 bg-tertiary" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" aria-controls="offcanvasWithBothOptions" data-bs-scroll="true">
       <div class="offcanvas-header">
         <div class="offcanvas-title d-flex align-items-center mb-3 mb-md-0 me-md-auto fs-4" id="offcanvasRightLabel" >
-          <form class="d-flex" role="search">
+          <form class="d-flex" role="search" method="post">
             {% csrf_token %}
-            <input class="form-control me-2" type="search" placeholder="Suchen" aria-label="Search" />
+            <input class="form-control me-2" type="search" placeholder="Suchen" aria-label="Search" name="suche" />
             <button class="btn btn-outline-primary" type="submit">Suchen</button>
           </form>
         </div>

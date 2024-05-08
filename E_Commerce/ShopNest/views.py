@@ -6,7 +6,15 @@ from .models import Artikel
 
 def startseite(request):
     artikels = Artikel.objects.all()
-    ctx = {"artikels": artikels}
+    search = None
+
+    if request.method == "POST":
+        print(request)
+        print(request.POST)
+        search = Artikel.objects.get(titel = request.POST["suche"])
+
+    ctx = {"artikels": artikels, "suche": search}
+
     return TemplateResponse(request, "ShopNest/startseite.html", ctx)
 
 def artikelView(request, id):
